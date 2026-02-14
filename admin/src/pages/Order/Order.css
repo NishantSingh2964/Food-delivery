@@ -1,0 +1,147 @@
+.order {
+  padding: 40px;
+  background: #ffffff;
+  min-height: 100vh;
+  flex: 1;
+}
+
+.order h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+  font-size: 15px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 2fr 120px 120px 220px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  border: 1px solid #ffe2cc;
+  box-shadow: 0 5px 20px rgba(255, 122, 0, 0.08);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.15);
+}
+
+/* Orange Accent Line */
+.order-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: #ff7a00;
+  border-radius: 16px 0 0 16px;
+}
+
+.order-left {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.order-left img {
+  width: 55px;
+  height: 55px;
+}
+
+.order-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.order-food {
+  font-weight: 600;
+  color: #222;
+}
+
+.order-name {
+  font-weight: 500;
+}
+
+.order-address,
+.order-phone {
+  font-size: 13px;
+  color: #888;
+}
+
+.order-middle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.order-price {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7a00;
+}
+
+.order-status {
+  text-align: right;
+}
+
+.order-status select {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ffe2cc;
+  background: #fff4ec;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff7a00;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.order-status select:hover {
+  background: #ffe8dc;
+}
+
+.order-status select:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
+}
+
+@media (max-width: 900px) {
+  .order-item {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .order-middle,
+  .order-price,
+  .order-status {
+    text-align: left;
+  }
+
+  .order-status {
+    margin-top: 10px;
+  }
+}
+
